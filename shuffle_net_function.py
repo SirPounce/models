@@ -1,5 +1,5 @@
 from tensorflow.keras.layers import *
-import tensorflow as tf
+from tensorflow.keras.models import Model
 import math
 
 
