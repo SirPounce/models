@@ -1,3 +1,9 @@
+from tf.keras.layers import *
+import tensorflow as tf
+
+
+
+
 def ShuffleNetUnit(tensor, in_channels, out_channels, n_groups, stride): # [112,112,24], in_channels=24, n_groups=384, stride=2
   
   bottleneck_channels = out_channels // 4 #96
@@ -11,6 +17,7 @@ def ShuffleNetUnit(tensor, in_channels, out_channels, n_groups, stride): # [112,
   
   print('after shuffle', type(x), x.shape)
   return x
+
 
 def pwGConv(tensor, in_channels, out_channels, n_groups): # [112,112,24], in_channels=24, n_groups=384, stride=2
   #pointwise group convolution
